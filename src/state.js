@@ -1,4 +1,6 @@
-import {rerenderEntireThree} from "./render";
+let rerenderEntireThree = () => {
+  // console.log('State is changed')
+}
 
 let state = {
     dishes: {
@@ -21,6 +23,10 @@ let state = {
 export let printDish = (dishItem) => {
     state.productList.push(dishItem);
     rerenderEntireThree(state)
+}
+
+export const subscribe = (observer) => {
+  rerenderEntireThree = observer;
 }
 
 
