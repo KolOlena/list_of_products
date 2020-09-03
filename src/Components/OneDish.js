@@ -1,15 +1,14 @@
 import React from "react";
 
-const OneDish = ({dish, printDish}) => {
+const OneDish = ({dish, printIngredient}) => {
 
-    let getDish = (key) => {
-        let text = key;
-        printDish(text);
-    }
+  let getDish = (dishToIngredients) => {
+    printIngredient(dishToIngredients);
+  }
 
-    return (
-        <div onClick={()=>getDish(dish)} > {dish} </div>
-    );
+  return (
+    <div onClick={() => getDish(dish)}> {dish} </div>
+  );
 }
 
 export default OneDish

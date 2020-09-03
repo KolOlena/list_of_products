@@ -1,16 +1,17 @@
 import React from "react";
-import {rerenderEntireTree} from "../index";
+import ProductItem from "./ProductItem";
 
-const ProductList = ({list, printDish}) => {
-    return (
-        <div>
-        <div>Need to by:</div>
-            <div>{list}</div>
-            {/*<div> Продукт {name}</div>*/}
-            {/*<div> Количество {count}</div>*/}
-            {/*<div> Чего {metrick}</div>*/}
-        </div>
-    );
+const ProductList = ({productList}) => {
+  let shopList = productList.map(function(ingredientsItem) {
+    return (<ProductItem ingredientsItem={ingredientsItem}/>)
+  })
+
+  return (
+    <div>
+      <div>Need to by:</div>
+      <div>{shopList}</div>
+    </div>
+  );
 }
 
-export default ProductList
+export default ProductList;
