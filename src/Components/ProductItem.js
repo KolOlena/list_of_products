@@ -1,8 +1,8 @@
 import React from "react";
 
-const ProductItem = ({ingredientsItem: {name, count, metrick}}) => {
+const ProductItem = ({ingredientsItem: {name, count, measure}}) => {
   return (
-    <div>{name} {count} {metrick}</div>
+    <div>{name} {count} {measure}</div>
   );
 }
 

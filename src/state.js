@@ -4,15 +4,15 @@ let state = {
   dishes: {
     'borsh':
       [
-        {name: 'kapusta', count: 1, metrick: 'kg'},
-        {name: 'meat', count: 1, metrick: 'kg'},
-        {name: 'kartoshka', count: 6, metrick: 'sht'},
+        {name: 'kapusta', count: 1, measure: 'kg'},
+        {name: 'meat', count: 1, measure: 'kg'},
+        {name: 'kartoshka', count: 6, measure: 'sht'},
       ],
     'plof':
       [
-        {name: 'rise', count: 0.5, metrick: 'kg'},
-        {name: 'meat', count: 0.5, metrick: 'kg'},
-        {name: 'morkovks', count: 6, metrick: '2'},
+        {name: 'rise', count: 0.5, measure: 'kg'},
+        {name: 'meat', count: 0.5, measure: 'kg'},
+        {name: 'morkovks', count: 6, measure: '2'},
       ]
   },
   ingredientsArray: []
