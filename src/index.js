@@ -3,21 +3,23 @@ import React from "react";
 import ReactDOM from 'react-dom';
 import App from "./App";
 import {BrowserRouter} from "react-router-dom";
-import state, { subscribe } from './state'
-import {printIngredient} from './state'
+import store from './redux-store'
 
 
 let rerenderEntireThree = (state) => {
   ReactDOM.render(
     <BrowserRouter>
-      <App state={state} printIngredient={printIngredient}/>
+      <App state={state} dispatch={store.dispatch.bind(store)}/>
     </BrowserRouter>, document.getElementById('root')
   );
 }
 
-rerenderEntireThree(state);
+rerenderEntireThree(store.getState());
 
-subscribe(rerenderEntireThree);
+store.subscribe(() => {
+  let state = store.getState();
+  rerenderEntireThree(state);
+});
 
 
 

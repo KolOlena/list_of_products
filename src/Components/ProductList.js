@@ -1,11 +1,7 @@
 import React from "react";
-import ProductItem from "./ProductItem";
 
-const ProductList = ({productList}) => {
-  let shopList = productList.map(function(ingredientsItem) {
-    return (<ProductItem ingredientsItem={ingredientsItem}/>)
-  })
 
+const ProductList = ({shopList}) => {
   return (
     <div>
       <div>Need to by:</div>
