@@ -3,13 +3,12 @@ import {BrowserRouter} from "react-router-dom";
 import DishesContainer from "./Components/DishesContainer";
 import ProductListContainer from "./Components/ProductListContainer";
 
-const App = ({state, dispatch}) => {
-  debugger
+const App = () => {
     return (
         <BrowserRouter>
             <div>
-                <DishesContainer state={state} dispatch={dispatch}/>
-                <ProductListContainer productList={state.dishes.ingredientsArray}/>
+                <DishesContainer />
+                <ProductListContainer />
             </div>
         </BrowserRouter>
     )

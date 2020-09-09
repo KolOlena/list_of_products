@@ -3,14 +3,12 @@ import dishesReducer from "./dishesReducer";
 let store = {
   _state: {
     dishes: {
-      'borsh':
-        [
+      'borsh': [
           {name: 'kapusta', count: 1, measure: 'kg'},
           {name: 'meat', count: 1, measure: 'kg'},
           {name: 'kartoshka', count: 6, measure: 'sht'},
         ],
-      'plof':
-        [
+      'plof': [
           {name: 'rise', count: 0.5, measure: 'kg'},
           {name: 'meat', count: 0.5, measure: 'kg'},
           {name: 'morkovks', count: 6, measure: '2'},
